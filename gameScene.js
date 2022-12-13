@@ -25,8 +25,8 @@ let giftBox;
 let itemGroup;
 let sockOnlyGroup;
 let itemCount = 0;
-let speed = 1.5;
-let giftBoxSpeed = 2;
+let speed = 1;
+let giftBoxSpeed = 1.5;
 let oneTimeCount = 20;
 
 let score = 0;
