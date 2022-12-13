@@ -180,6 +180,7 @@ rewardScene.create = function () {
     this.createTopRow();
     this.createRewardText();
     this.createUserScoreBoard();
+    // this.createRewardButton();
 }
 
 rewardScene.update = function () {

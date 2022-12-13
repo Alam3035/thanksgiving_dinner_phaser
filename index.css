@@ -48,23 +48,296 @@ h6 {
   overflow-wrap: break-word;
 }
 
+#root,
+#__next {
+  isolation: isolate;
+}
+
+#intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#intro_top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+#fhc_logo {
+  width: 30%;
+}
+
+#event_logo {
+  width: 90%;
+}
+
+#intro_message {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+#custom_message {
+  width: 90%;
+  text-align: center;
+  color: brown;
+  font-family: "Quicksand", sans-serif;
+  font-size: 13px;
+}
+
+#intro_middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+#preview {
+  width: 90%;
+}
+
+#intro_bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  gap: 5px;
+  padding-top: 20px;
+}
+
+#start_button {
+  padding-top: 20px;
+  width: 50%;
+}
+
+#gaming {
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  position: absolute;
+}
+
+#reward {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#reward_top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+#reward_fhc_logo {
+  width: 30%;
+}
+
+#reward_event_logo {
+  width: 90%;
+}
+
+#reward_middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 80%; */
+  padding-top: 10px;
+  gap: 10px;
+}
+
+#score_board {
+  position:relative;
+  width: 60%;
+}
+
+#reward_score {
+  position:absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  font-size: 46px;
+}
+
+#congratulations {
+  width: 60%;
+}
+
+#chip_0k {
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+}
+
+#chip_100k {
+  display: none;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+}
+
+#chip_150k {
+  display: none;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+}
+
+#chip_200k {
+  display: none;
+  width: 100%;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+}
+
+#reward_image {
+  width: 100%;
+  margin-top: -230px;
+}
+
+#reward_bottom {
+  width: 50%;
+  margin-top: 5%;
+}
+
+#reward_button {
+  display: none;
+}
+
+#back {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#back_top {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+#back_fhc_logo {
+  width: 30%;
+}
+
+#back_event_logo {
+  width: 70%;
+}
+
+#back_middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  gap: 10px;
+}
+
+#back_error {
+  width: 50%;
+}
+
+#back_image {
+  width: 80%;
+}
+
+#back_bottom {
+  width: 50%;
+  margin-top: 5%;
+}
+
+#claimed {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#claimed_top {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+#claimed_fhc_logo {
+  width: 30%;
+}
+
+#claimed_event_logo {
+  width: 70%;
+}
+
+#claimed_middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+#claimed_error {
+  width: 100%;
+  text-align: center;
+  color: brown;
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+}
+
+#claimed_image {
+  width: 100%;
+}
+
+#claimed_bottom {
+  width: 50%;
+  margin-top: 5%;
+}
+
 @media (orientation: landscape) {
-    body {
-      line-height: 1;
-      -webkit-font-smoothing: antialiased;
-      background-color: black;
-      background-image: url("assets/rotate.png");
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: auto;
-    }
-  
-    #gaming {
-      display: none;
-    }
-  
-    #main {
-      display: none
-    }
+  body {
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    background-color: black;
+    background-image: url("assets/rotate.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
   }
-  
+
+  #gaming {
+    display: none;
+  }
+
+  #main {
+    display: none
+  }
+}

@@ -1,9 +1,14 @@
-const screen_width = 1520; //16:9 - 1920
-const screen_height = 1080;
-const game_width = 810; //16:9 - 607.5
-const game_height = 1080;
+let screen_width = 1520; //16:9 - 1920
+let screen_height = 1080;
+let game_width = 810; //16:9 - 607.5
+let game_height = 1080;
 
-let game;
+var game;
+var called = 0;
+var clicked = false;
+var actualScore;
+var didGameStart = false;
+
 let config;
 let windowRatio;
 let screenOrientation;
@@ -15,7 +20,7 @@ function createGameConfig() {
   screen_height = 1440;
   game_width = 810;
   game_height = 1080;
-  
+
   config = {
     type: Phaser.AUTO,
     parent: "main",
@@ -39,6 +44,7 @@ function createGameConfig() {
 }
 
 function startGame() {
+  didGameStart = true;
   windowRatio = window.innerWidth / window.innerHeight;
   let newOrientation = windowRatio > 1 ? "landscape" : "portrait";
   if (screenOrientation !== newOrientation) {
