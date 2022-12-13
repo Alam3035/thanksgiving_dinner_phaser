@@ -11,6 +11,11 @@ let screenOrientation;
 startGame();
 
 function createGameConfig() {
+  screen_width = 810;
+  screen_height = 1440;
+  game_width = 810;
+  game_height = 1080;
+  
   config = {
     type: Phaser.AUTO,
     parent: "main",
