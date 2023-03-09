@@ -41,20 +41,19 @@ homeScene.initSettings = function () {
 
 homeScene.createInstruction = function () {
     instruction = this.add.text(
-        centerX - 435,
-        centerY - 430,
-        `           Please help us to send the gifts! Swipe your fingers to 
-        correctly assign gift boxes and turkeys on the table to the FHC 
-        character. Be careful to avoid the old socks! FHC characters may 
-        stop accepting gifts at any time, and the tablecloths will move 
-        faster and faster. Get 200,000 chips when you reached 
-        400 points. Let's test your reaction!`,
+        centerX - 425,
+        centerY - 580,
+        `           Swipe your fingers to correctly assign gift boxes 
+        and turkeys on the table to the correct character. Be careful to 
+        avoid the old socks! characters may stop accepting 
+        gifts at any time, and the tablecloths will move 
+        faster and faster. Let's test your reaction!`,
         { fontFamily: 'Arial', fontSize: 26, color: 'white', align: 'center' }
     )
 
     instruction.setDepth(2);
 
-    let rectangle = this.add.rectangle(400, centerY - 340, 900, 198, 0xa518a7);
+    let rectangle = this.add.rectangle(400, centerY - 500, 900, 198, 0xa518a7);
     rectangle.alpha = 0.4
     rectangle.setDepth(1)
 }
