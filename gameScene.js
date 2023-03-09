@@ -60,24 +60,6 @@ gameScene.initSettings = function () {
     };
 }
 
-gameScene.createTopRow = function () {
-    gameEventLogo = this.add.image(
-        titleRect.x + titleRect.w * 0.5,
-        titleRect.y + titleRect.h * 0.7,
-        "event_logo"
-    )
-    gameEventLogo.setScale(0.5)
-    gameEventLogo.setDepth(1);
-
-    gameFhcLogo = this.add.image(
-        titleRect.x + titleRect.w * 0.5,
-        titleRect.y + titleRect.h * 0.2,
-        "fhc_logo"
-    )
-    gameFhcLogo.setScale(0.6)
-    gameFhcLogo.setDepth(1);
-}
-
 gameScene.setTimeBoard = function () {
     timeBg = this.add.image(
         titleRect.x + titleRect.w * 0.75,
@@ -477,25 +459,14 @@ gameScene.weightedRandom = function (items, weights) {
         throw new Error('Items must not be empty');
     }
 
-    // Preparing the cumulative weights array.
-    // For example:
-    // - weights = [1, 4, 3]
-    // - cumulativeWeights = [1, 5, 8]
     const cumulativeWeights = [];
     for (let i = 0; i < weights.length; i += 1) {
         cumulativeWeights[i] = weights[i] + (cumulativeWeights[i - 1] || 0);
     }
 
-    // Getting the random number in a range of [0...sum(weights)]
-    // For example:
-    // - weights = [1, 4, 3]
-    // - maxCumulativeWeight = 8
-    // - range for the random number is [0...8]
     const maxCumulativeWeight = cumulativeWeights[cumulativeWeights.length - 1];
     const randomNumber = maxCumulativeWeight * Math.random();
 
-    // Picking the random item based on its weight.
-    // The items with higher weight will be picked more often.
     for (let itemIndex = 0; itemIndex < items.length; itemIndex += 1) {
         if (cumulativeWeights[itemIndex] >= randomNumber) {
             return {
@@ -583,9 +554,9 @@ gameScene.moveItems = function () {
 
     itemGroup.getChildren().forEach(function (item) {
         if (item.name.includes("gift")) {
-            tempSpeed = giftBoxSpeed * 2
+            tempSpeed = giftBoxSpeed * 1.5
         } else {
-            tempSpeed = speed * 2
+            tempSpeed = speed * 1.5
         }
 
         item.y += tempSpeed
@@ -655,7 +626,6 @@ gameScene.changeGiftBoxStatus = function () {
 
 gameScene.create = function () {
     this.initSettings();
-    this.createTopRow();
     this.setTimeBoard();
     this.setScoreBoard();
     this.setComboBoard();

@@ -38,23 +38,6 @@ homeScene.initSettings = function () {
     };
 }
 
-homeScene.createTopRow = function () {
-    eventLogo = this.add.image(
-        titleRect.x + titleRect.w * 0.5,
-        titleRect.y + titleRect.h * 0.95,
-        "event_logo"
-    )
-    eventLogo.setScale(0.65)
-    eventLogo.setDepth(1);
-
-    fhcLogo = this.add.image(
-        titleRect.x + titleRect.w * 0.5,
-        titleRect.y + titleRect.h * 0.3,
-        "fhc_logo"
-    )
-    fhcLogo.setScale(0.9)
-    fhcLogo.setDepth(1);
-}
 
 homeScene.createInstruction = function () {
     instruction = this.add.text(
@@ -250,7 +233,6 @@ homeScene.itemSpawn = function () {
 
 homeScene.create = function () {
     this.initSettings();
-    this.createTopRow();
     this.createInstruction();
     this.createTable();
     this.createDropArea();
